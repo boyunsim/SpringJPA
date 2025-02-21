@@ -23,6 +23,5 @@ public class StudentController {
     @GetMapping//Pageable은 0이 1페이지이다.
     public List<StudentRes> getStudentList(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "20") int size) {
         return studentService.getStudentList(PageRequest.of(page,size));
-
     }
 }
